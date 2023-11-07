@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-certificación de Ingresos Anuales</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para etiquetas de los campos */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Estilos para campos de entrada de texto y número */
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Estilos para select */
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+        button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Añadir margen superior */
+    margin-bottom: 20px; /* Añadir margen inferior */
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para la casilla de verificación de certificación */
+        input[type="checkbox"] {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos para el mensaje de alerta */
+        .alert {
+            background-color: #f44336;
+            color: white;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        // Función para validar el formulario antes de enviarlo
+        function validarFormulario() {
+            var apellido = document.getElementById("apellido").value;
+            var nombre = document.getElementById("nombre").value;
+            var personasHogar = document.getElementById("personas_hogar").value;
+            var mujerCabezaFamilia = document.getElementById("mujer_cabeza_familia").value;
+            var personasDiscapacidad = document.getElementById("personas_discapacidad").value;
+            var direccion = document.getElementById("direccion").value;
+            var ciudad = document.getElementById("ciudad").value;
+            var estado = document.getElementById("estado").value;
+            var codigoPostal = document.getElementById("codigo_postal").value;
+            var telefono = document.getElementById("telefono").value;
+            var ingresoAnual = document.getElementById("ingreso_anual").value;
+            var certificacion = document.getElementById("certificacion").checked;
+
+            // Validaciones
+            if (apellido === "" || nombre === "" || personasHogar === "" || mujerCabezaFamilia === "" || personasDiscapacidad === "" || direccion === "" || ciudad === "" || estado === "" || codigoPostal === "" || telefono === "" || ingresoAnual === "" || !certificacion) {
+                alert("Por favor, complete todos los campos y acepte la certificación.");
+                return false; // Evita que el formulario se envíe
+            }
+
+            // Puedes agregar más lógica de validación aquí según tus necesidades.
+
+            return true; // Envía el formulario si todos los campos están completos
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Auto-certificación de Ingresos Anuales</h1>
+        <form action="procesar_certificacion.php" method="post">
+            <label for="apellido"> Apellido / Last Name:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="nombre"> Nombre / Name:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="personas_hogar"> Personas en el hogar / People in the household:</label>
+            <input type="number" id="personas_hogar" name="personas_hogar" required>
+
+            <label for="mujer_cabeza_familia"> Mujer Cabeza de Familia / Female Head Household:</label>
+            <select id="mujer_cabeza_familia" name="mujer_cabeza_familia" required>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="personas_discapacidad"> Personas con discapacidad / People with disability:</label>
+            <input type="number" id="personas_discapacidad" name="personas_discapacidad" required>
+
+            <label for="direccion"> Dirección / Address:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="ciudad"> Ciudad / City:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+
+            <label for="estado"> Estado / State:</label>
+            <input type="text" id="estado" name="estado" required>
+
+            <label for="codigo_postal"> Código Postal / Zip Code:</label>
+            <input type="text" id="codigo_postal" name="codigo_postal" required>
+
+            <label for="telefono"> Número de teléfono / Phone Number:</label>
+            <input type="text" id="telefono" name="telefono" required>
+
+            <label for="ingreso_anual"> Información de Ingreso / Income Information:</label>
+            <input type="number" id="ingreso_anual" name="ingreso_anual" required>
+
+            <label for="certificacion"> Certificación / Certification:</label>
+            <input type="checkbox" id="certificacion" name="certificacion" required>
+            <label for="certificacion">Certifico que esta información es completa y precisa / I certify that this
+                information is complete and accurate.</label>
+
+            <button type="submit">Enviar Certificación</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/estiloFormulario.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='estiloFormulario.css') }}">
+
+    <title>Formulario de Inscripción</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulario de Inscripción</h1>
+      <form
+        action="/"
+        method="post"
+        autocomplete="off"
+        id="formulario"
+      >
+        <div class="form-group">
+          <label for="idioma" id="idioma_label">Elección del idioma:</label>
+          <select id="idioma" name="idioma" onchange="cambiarIdioma()">
+            <option value="Español">Español</option>
+            <option value="English">English</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sucursal" id="sucursal_label"
+            >Elección de la sucursal:</label
+          >
+          <select id="sucursal" name="sucursal">
+            <option value="Everett">Everett</option>
+            <option value="Lynnwood">Lynnwood</option>
+          </select>
+        </div>
+
+        <!-- Agregar más campos aquí -->
+        <div class="form-group">
+          <label for="fecha" id="Date">Fecha:</label>
+          <input type="date" id="fecha" name="fecha" required />
+        </div>
+
+        <div class="form-group">
+          <label for="clases" id="clases_label">Clases:</label>
+          <select id="clases" name="clases">
+            <option value="Maquillaje" id="maquillaje">Maquillaje</option>
+            <option value="Repostería" id="repostería">Repostería</option>
+            <option value="Plaza Comunitaria" id="plaza Comunitaria">
+              Plaza Comunitaria
+            </option>
+            <option value="Costura" id="costura">Costura</option>
+            <option value="Negocio-Finanza" id="negocio-Finanza">
+              Negocio-Finanza
+            </option>
+            <option value="Español para niños" id="español para niños">
+              Español para niños
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="nombre" id="nombre_label">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+
+        <div class="form-group">
+          <label for="apellido" id="apellido_label">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required />
+        </div>
+
+        <div class="form-group">
+          <label for="cp" id="cp_label">Código Postal:</label>
+          <input type="text" id="cp" name="cp" />
+        </div>
+
+        <div class="form-group">
+          <label for="salario" id="salario_label">Salario Anual:</label>
+          <select id="salario" name="salario">
+            <option value="> $10,000">&gt; $10,000</option>
+            <option value="$10,001 - $30,000">$10,001 - $30,000</option>
+            <option value="$30,001 - $50,000">$30,001 - $50,000</option>
+            <option value="$50,001 - $70,000">$50,001 - $70,000</option>
+            <option value="$70,001 - $90,000">$70,001 - $90,000</option>
+            <option value="+$90,001">+$90,001</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="comentario" id="comentario_label">Comentario:</label>
+          <textarea
+            id="comentario"
+            name="comentario"
+            cols="30"
+            rows="2"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Enviar" id="enviar" />
+          <input type="reset" value="Restablecer" id="restablecer" />
+         <!--<button id="descargar">Descargar Datos en XLSX</button>--> 
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function cambiarIdioma() {
+        var selectIdioma = document.getElementById("idioma");
+
+        if (selectIdioma.value === "English") {
+          // Cambiar etiquetas y opciones al inglés
+          document.getElementById("idioma_label").textContent =
+            "Language Selection:";
+          document.getElementById("sucursal_label").textContent =
+            "Branch Selection:";
+          document.getElementById("clases_label").textContent = "Classes:";
+          document.getElementById("Date").textContent = "Date:";
+          document.getElementById("nombre_label").textContent = "Name:";
+          document.getElementById("maquillaje").textContent = "Make-up";
+          document.getElementById("repostería").textContent = "Cake shop";
+          document.getElementById("plaza Comunitaria").textContent =
+            "Community Plaza";
+          document.getElementById("costura").textContent = "Sewing";
+          document.getElementById("negocio-Finanza").textContent =
+            "Business-Finance";
+          document.getElementById("español para niños").textContent =
+            "Spanish for children";
+          document.getElementById("apellido_label").textContent = "Last name:";
+          document.getElementById("cp_label").textContent = "Postal Code:";
+          document.getElementById("salario_label").textContent =
+            "Annual salary:";
+          document.getElementById("comentario_label").textContent = "Comment:";
+          document.getElementById("enviar").value = "Submit";
+          document.getElementById("restablecer").value = "Reset";
+        } else {
+          // Cambiar etiquetas y opciones al español
+          document.getElementById("idioma_label").textContent =
+            "Elección del idioma:";
+          document.getElementById("sucursal_label").textContent =
+            "Elección de la sucursal:";
+          document.getElementById("clases_label").textContent = "Clases:";
+          document.getElementById("Date").textContent = "Fecha";
+          document.getElementById("nombre_label").textContent = "Nombre:";
+          document.getElementById("maquillaje").textContent = "Maquillaje";
+          document.getElementById("repostería").textContent = "Repostería";
+          document.getElementById("plaza Comunitaria").textContent =
+            "Plaza Comunitaria";
+          document.getElementById("costura").textContent = "Costura";
+          document.getElementById("negocio-Finanza").textContent =
+            "Negocio-Finanza";
+          document.getElementById("español para niños").textContent =
+            "Español para niños";
+          document.getElementById("apellido_label").textContent = "Apellido:";
+          document.getElementById("cp_label").textContent = "Código Postal:";
+          document.getElementById("salario_label").textContent =
+            "Salario Anual:";
+          document.getElementById("comentario_label").textContent =
+            "Comentario:";
+          document.getElementById("enviar").value = "Enviar";
+          document.getElementById("restablecer").value = "Restablecer";
+        }
+      }
+    </script>
+    
+    <!--Aca es para imprimir los datos de la base de datos-->
+    <!-- Agrega la referencia a la biblioteca xlsx -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+    <!-- Agrega la referencia a la biblioteca xlsx 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const datosUsuarios = []; // Array para almacenar los datos de los usuarios
+
+        const formulario = document.getElementById("formulario");
+        formulario.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevenir la recarga de la página al enviar el formulario
+
+          // Captura los datos del formulario
+          const idioma = document.getElementById("idioma").value;
+          const sucursal = document.getElementById("sucursal").value;
+          const fecha = document.getElementById("fecha").value;
+          const clases = document.getElementById("clases").value;
+          const nombre = document.getElementById("nombre").value;
+          const apellido = document.getElementById("apellido").value;
+          const cp = document.getElementById("cp").value;
+          const salario = document.getElementById("salario").value;
+          const comentario = document.getElementById("comentario").value;
+
+          // Organiza los datos en un objeto para el usuario actual
+          const usuario = {
+            "Elección del idioma": idioma,
+            "Elección de la sucursal": sucursal,
+            Fecha: fecha,
+            Clases: clases,
+            Nombre: nombre,
+            Apellido: apellido,
+            "Código Postal": cp,
+            "Salario Anual": salario,
+            Comentario: comentario,
+          };
+
+          // Agrega los datos del usuario actual al array
+          datosUsuarios.push(usuario);
+
+          // Limpia el formulario para el siguiente usuario
+          formulario.reset();
+        });
+
+        // Agrega un evento a un botón para descargar los datos de todos los usuarios en un archivo XLSX
+        const descargarBtn = document.getElementById("descargar");
+        descargarBtn.addEventListener("click", function () {
+          // Crea una hoja de cálculo con los datos de todos los usuarios
+          const ws = XLSX.utils.json_to_sheet(datosUsuarios);
+          const wb = XLSX.utils.book_new();
+          XLSX.utils.book_append_sheet(wb, ws, "Usuarios");
+
+          // Crea un enlace para descargar el archivo XLSX
+          XLSX.writeFile(wb, "usuarios.xlsx");
+        });
+      });
+    </script>-->
+
+  </body>
+</html>

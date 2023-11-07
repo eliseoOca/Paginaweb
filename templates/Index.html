@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=" width = divice-width, initial-scale=1.0">
+    <title>Proyecto Real 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="header" id="inicio">
+        
+        <nav>
+            <div class="navbar">
+                <ul class="nav-list">
+                    <li class="dropdown">
+                        <a class="menu" href="#servicios">MENU</a>
+                        <div  class="dropdown-content1 menu-div">
+                            <a href="carrusel.html">Class</a>
+                            <a href="indexDonation.html">Donations</a>
+                            <a href="">Gallery</a>
+                            <a href="/templates/login.html">Course/Food Bank Registration Form</a>
+                            <a href="cartasAgradecimiento.html">Letter of Gratitude</a>
+                        </div>
+                    </li>
+                   
+                </ul>
+            </div>
+        </nav>
+    
+
+    </header>
+    <main>
+        <section class="contenedor" id="servicio">
+        <h2 class="subtitulo">Organization Summary</h2>
+        <div class="contenedor-servicio">
+            <img src="{{ url_for('static', filename='undraw_Showing_support_re_5f2v.png') }}" alt="">
+            <div class="checklist-servicio">
+                <div class="service">
+                   
+                   <p>Madres de Casino Road is a small BIPOC nonprofit organization 
+                    that started during the summer of 2017. Initially, our goal was to empower
+                     women in their personal development through education. As we began to work 
+                     with different groups within our community, we expanded our services to 
+                     create safe environments for vulnerable families, serving Hispanic residents 
+                     and other underserved groups within Snohomish County, Washington. Our mission
+                      continues to be focused on education because we believe that 
+                      this is the best way to serve our community. Through our 
+                      programs, we help to close the gap between people of diverse
+                       backgrounds, responding to racial, socio-economic, and 
+                       gender divisions that divide our society. By providing 
+                       services that address these inequities, we strengthen the 
+                       social connections between our residents and give them the 
+                       knowledge and resources they need to achieve their goals.</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        </section>
+        <section class="contenedor" id="servicio">
+            <h2 class="subtitulo">Vision</h2>
+            <div class="contenedor-servicio">
+                <img src="{{ url_for('static', filename='undraw_Creative_woman_re_u5tk.png') }}" alt="">
+                <div class="checklist-servicio">
+                    <div class="service">
+                       
+                       <p>To be an active, agile and innovative community organization
+                         that responds proactively to the challenges we face and develops 
+                         cutting-edge projects that help those who need it most; standing 
+                         out above all for the dedication, ability and altruism of our members.</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <section class="contenedor" id="servicio">
+                <h2 class="subtitulo">Mission</h2>
+                <div class="contenedor-servicio">
+                    <img src="{{ url_for('static', filename='undraw_World_re_768g.png') }}" alt="">
+                    <div class="checklist-servicio">
+                        <div class="service">
+                           
+                           <p>Our mission is to empower vulnerable Hispanic families in 
+                            Snohomish County, giving them the support they need to achieve
+                             personal, educational, and professional success. Through these 
+                             efforts, we strengthen our communities and strive to create a more 
+                             equitable society. </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+            </section>
+
+            <section class="about-us">
+                <div class="contenedor1">
+                    <h2 class="titulo">Core Values</h2>
+                    <div class="contenedor-articulo">
+                        <div class="articulo"  data-aos="zoom-out-right" data-aos-duration="1000">
+                            <img class="img" src="{{ url_for('static', filename='undraw_1.png') }}" alt="">
+                            <h3>Commitment</h3>
+                            <p>  To help our community progress.</p>
+                            
+                        </div>
+                        <div class="articulo"  data-aos="zoom-out-right" data-aos-duration="1500"> 
+                            <img class="img" src="{{ url_for('static', filename='undraw_2.png') }}" alt="">
+                            
+                            <h3>Intimacy</h3>
+                            <p>To create an environment where each  member of the family feels welcome.</p>
+                            
+                        </div>
+                        
+                        
+                        <div class="articulo"  data-aos="zoom-out-right" data-aos-duration="1500">
+                            <img class="img" src="{{ url_for('static', filename='undraw_3.png') }}" alt="">
+                            <h3>Dedication</h3>
+                            <p> Help by providing the best of ourselves at the service of the community; welcoming vulnerable people 
+                                regardless of their age, sex, race, origin, education or religion.</p>
+                            
+                        </div>
+                        <div class="articulo"  data-aos="zoom-out-right" data-aos-duration="2000">
+                            <img class="img peque" src="{{ url_for('static', filename='undraw_4.png') }}" alt="">
+                            <h3>Development</h3>
+                            <p>Constant search to do more for our community; open to work with other organization, companies and foundations 
+                                to achieve our aid objectives and the greatest benefit for the people we serve.</p>
+                            
+                        </div>
+
+                        <div class="articulo"  data-aos="zoom-out-right" data-aos-duration="2000">
+                            <img class="img" src="{{ url_for('static', filename='undraw_5.png') }}" alt="">
+                            <h3>Integrity</h3>
+                            <p>We seek comprehensiveness in our accomplishment and training models, proposing durable solutions to eradicate the causes
+                                 of exclusion and overcome personal, social or professional obstacles that make integration possible..</p>
+                            
+                        </div>
+
+                        <div class="articulo"  data-aos="zoom-out-right" data-aos-duration="2000">
+                            <img class="img" src="{{ url_for('static', filename='undraw_6.png') }}" alt="">
+                            <h3>Honesty</h3>
+                            <p>In the management of our projects, for this we make our organization accessible and visible
+                                 and we work to incorporate quality standards, evaluations and external activity controls.</p>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            
+            <section class="imagen-light">
+                <img src="{{ url_for('static', filename='cancel.svg') }}" alt="" class="close">
+                <img src="img/8.jpeg" alt="" class="agregar-imagen">
+            </section>
+            <section class="contenedor" id="experto">
+                <h2 class="subtitulo">Madres de Casino Rd – Coronavirus (COVID-19) Impact Planning</h2>
+                
+                <iframe src="{{ url_for('static', filename='Madres de Casino Rd - Impact Planning.pdf') }}" frameborder="0" type="application/pdf" width="100%" height="375px" style="border: none;"></iframe>
+
+                <section >
+                    <hr>
+                    <br>
+                    <br>
+                    <h2 class="subtitulo">Annual Report 2020</h2>
+                    
+                    <iframe src="{{ url_for('static', filename='Annual Report Madres de Casino 2020.pdf') }}" frameborder="0" type="application/pdf" width="100%" height="375px" style="border: none;"></iframe>
+                </section>
+
+                <section >
+                    <hr>
+                    <br>
+                    <br>
+                    <h2 class="subtitulo">Annual Report 2021</h2>
+                    
+                    <iframe src="{{ url_for('static', filename='Annual Report Madres de Casino 2021.pdf') }}" frameborder="0" type="application/pdf" width="100%" height="375px" style="border: none;"></iframe>
+                </section>
+
+                <section class="video-face" >
+                    <hr>
+                    <br>
+                    <br>
+                    <h2 class="subtitulo">Interview with the president and founder Miriam Vargas.</h2>
+                    
+                    <iframe  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100076445612833%2Fvideos%2F597364085115461%2F&show_text=false&width=560&t=0"
+                         width="560" height="314" style="border:none;overflow:hidden " scrolling="no" frameborder="0" allowfullscreen="true" 
+                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                </section>
+
+                <section >
+                    <hr>
+                    <br>
+                    <br>
+                    <h2 class="subtitulo">We invite you to visit our social networks!</h2>
+                    <a  title="Instagram" href="https://www.instagram.com/madresdecasinord2017/?utm_source=ig_embed&ig_rid=a2d2a8bb-0a1a-4e3a-b2b4-3981f927b6b4">
+                        <img class="img-media" src="{{ url_for('static', filename='inta.png') }}" alt="Instagram">
+                    </a>
+
+                    <a class="img-media" title="Facebook" href="https://www.facebook.com/madrescasinord">
+                        <img  class="img-media" src="{{ url_for('static', filename='face.png') }}" alt="Facebook">
+                    </a>
+                     
+                </section>
+
+                <section>
+                    <div class="banner">
+                       <div class="capa"></div>
+                       <div class="info">
+                        
+                       </div> 
+                    </div>
+
+                </section>
+
+                <section>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="subtitulo">Contact us</h1>
+                    <hr>
+                    <br>
+                    <br>
+                    <div>
+                        <h4 class="tituloMenor">Or, even better, come visit us!</h4>
+                        <br>
+                        <p class="parrafo">We would love to welcome you, so come visit us! </p>
+                        <br>
+                        <p class="parrafoLeft">14 E Casino Rd building D, Everett, WA 98208, United States &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Street Southwest, Lynnwood, WA 98037, United States </p>
+                        <br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2673.78306593765!2d-122.23423134432171!3d47.921234820016224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900126483f7e05%3A0x98cc525a8c40b38e!2s14%20E%20Casino%20Rd%20building%20D%2C%20Everett%2C%20WA%2098204%2C%20EE.%20UU.!5e0!3m2!1ses!2sar!4v1686063413925!5m2!1ses!2sar" width="510" height="400" style="border:0; padding: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2678.0669271546994!2d-122.30902092312164!3d47.838296771948414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490051efacf6051%3A0xc9cbff4b931cd506!2s5408%20176th%20St%20SW%2C%20Lynnwood%2C%20WA%2098037%2C%20EE.%20UU.!5e0!3m2!1ses!2sar!4v1686077316283!5m2!1ses!2sar" width="510" height="400" style="border:0; padding: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </section>
+                 
+                    <br>
+                    <div class="container">
+                        <h1 class="subtitulo">Contact Form</h1>
+                        <div class="toggle-form">
+                            <button  id="toggleButton">Click Here!</form></button>
+                            <form id="formularioContacto" action="#" method="post">
+                                <label for="nombre">Name:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                
+                                <label for="mensaje">Message:</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                
+                                <button id="toggleButton" type="submit">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                 
+                  <hr>
+                  <br>
+                  <br> 
+                  
+                  <section id="donaciones">
+                    <h2 class="subtitulo">Donations</h2>
+                    
+                    <div class="banner-publicitario">
+                      <!-- Aquí puedes colocar el código o la imagen del banner publicitario -->
+                    </div>
+                    
+                    
+                    
+                    <!-- Puedes agregar más banners publicitarios según tus necesidades -->
+                    
+                    <div class="toggle-form">
+                      <a id="toggleButton" href="{{ url_for('index_donation') }}" class="boton-donacion">Make a donation</a>
+                    </div>
+                  </section>
+            </section>
+    </main>
+    <footer id="contacto">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="brand">Eliseo Ocaño - Esteban Ocaño</h2>
+                <p>Somos expertos en la creacion de tus sueños</p>
+            </div>
+            <div class="social-media">
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-instagram' ></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+  
+    <script src="{{ url_for('static', filename='js/scrip.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lightbox.js') }}"></script>
+    
+</body>
+</html>

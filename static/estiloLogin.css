@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Estilos anteriores */
+
+p {
+    margin-top: 10px; /* Espacio entre el formulario y el enlace de registro */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse sobre él */
+}
+
+/* Estilo para el mensaje de error */
+/* Estilo para el mensaje de error */
+.error-message {
+    color: #ff0000; /* Color rojo para el texto del mensaje de error */
+    font-size: 16px; /* Tamaño de fuente más grande */
+    background-color: #ffe5e5; /* Fondo con un tono de rojo claro */
+    padding: 10px; /* Relleno alrededor del mensaje */
+    border: 2px solid #ff0000; /* Borde rojo */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 10px; /* Espacio superior para separar el mensaje del formulario */
+}
+

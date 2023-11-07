@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='estiloDonations.css') }}" />
+    <title>Donations</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar">
+          <ul class="nav-list">
+            <li class="dropdown">
+              <a class="menu" href="#servicios">MENU</a>
+              <div class="dropdown-content1 menu-div">
+                <a href="Index.html">Start</a>
+                <a href="carrusel.html">Class</a>
+                <a href="">Gallery</a>
+                <a href="login.html">Course/Food Bank Registration Form</a>
+                <a href="cartasAgradecimiento.html">Letter of Gratitude</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container2">
+      <div class="left-column">
+        <img src="{{ url_for('static', filename='medres1.jpg') }}" alt="Imagen" />
+      </div>
+      <div class="right-column">
+        <h1 class="subtitulo">Thank you very much for supporting!</h1>
+        <h2 class="subtituloH2">
+          Checks or Money Order can be mailed to: <br />
+          Madres de Casino Rd <br />
+          105 W. Intercity Avenue <br />
+          Everett, WA 98204
+        </h2>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div class="container">
+      <h1 class="subtitulo H12">Donate via PayPal(not enabled)</h1>
+      <!-- Pegar el código del botón de donación proporcionado por PayPal aquí -->
+      <form
+        action="https://www.paypal.com/donate"
+        method="post"
+        target="_blank"
+      >
+        <input type="hidden" name="hosted_button_id" value="TU_ID_DE_BOTON" />
+        <button type="submit">Donate via PayPal</button>
+      </form>
+    </div>
+    <br />
+    <hr />
+    <script src="js/menu.js"></script>
+  </body>
+</html>
