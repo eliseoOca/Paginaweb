@@ -11,10 +11,11 @@
     />
   </head>
   <body>
+    
     <div class="login-container">
       <h2>Iniciar Sesión</h2>
       {% if error_message %}
-        <p class="error-message">{{ error_message }}</p>
+      <p class="error-message">{{ error_message }}</p>
       {% endif %}
       <form id="inicio_sesion" action="/inicio_sesion" method="POST">
         <label for="username">Email:</label>
@@ -42,5 +43,6 @@
         return true;
       }
     </script>
+    
   </body>
 </html>
