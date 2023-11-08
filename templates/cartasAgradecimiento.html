@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
     <title>Letter of Gratitude</title>
   </head>
 
@@ -14,11 +14,11 @@
           <li class="dropdown">
             <a class="menu" href="#servicios">MENU</a>
             <div class="dropdown-content1 menu-div">
-              <a href="Index.html">Start</a>
-              <a href="carrusel.html">Class</a>
-              <a href="indexDonation.html">Donations</a>
+              <a href="{{ url_for('index') }}">Start</a>
+              <a href="{{ url_for('carrusel') }}">Class</a>
+              <a href="{{ url_for('index_donation') }}">Donations</a>
               <a href="">Gallery</a>
-              <a href="login.html">Course/Food Bank Registration Form</a>
+              <a href="{{ url_for('login') }}">Course/Food Bank Registration Form</a>
             </div>
           </li>
         </ul>
@@ -31,7 +31,7 @@
       </h2>
 
       <iframe
-        src="docs/Letter of Gratitude from City of Everett Police Department.pdf"
+        src="{{ url_for('static', filename='Letter of Gratitude from City of Everett Police Department.pdf') }}"
         frameborder="0"
         type="application/pdf"
         width="100%"
@@ -50,7 +50,7 @@
         <br />
         <h2 class="subtitulo">Letter of Gratitude from USS RALPH JOHNSON</h2>
         <iframe
-          src="docs/Letter of Gratitude from USS RALPH JOHNSON.pdf"
+          src="{{ url_for('static', filename='Letter of Gratitude from USS RALPH JOHNSON.pdf') }}"
           frameborder="0"
           type="application/pdf"
           width="100%"
@@ -59,6 +59,6 @@
         ></iframe>
       </section>
     </section>
-    <script src="js/menu.js"></script>
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
   </body>
 </html>

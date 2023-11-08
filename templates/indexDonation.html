@@ -14,11 +14,11 @@
             <li class="dropdown">
               <a class="menu" href="#servicios">MENU</a>
               <div class="dropdown-content1 menu-div">
-                <a href="Index.html">Start</a>
-                <a href="carrusel.html">Class</a>
+                <a href="{{ url_for('index') }}">Start</a>
+                <a href="{{ url_for('carrusel') }}">Class</a>
                 <a href="">Gallery</a>
-                <a href="login.html">Course/Food Bank Registration Form</a>
-                <a href="cartasAgradecimiento.html">Letter of Gratitude</a>
+                <a href="{{ url_for('login') }}">Course/Food Bank Registration Form</a>
+                <a href="{{ url_for('cartas') }}">Letter of Gratitude</a>
               </div>
             </li>
           </ul>
@@ -57,6 +57,6 @@
     </div>
     <br />
     <hr />
-    <script src="js/menu.js"></script>
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
   </body>
 </html>
