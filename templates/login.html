@@ -11,14 +11,18 @@
     />
   </head>
   <body>
-    <header class="header" id="inicio">
-      <nav>
-        <!-- ... tu menú de navegación ... -->
-        <a href="{{ url_for('index') }}" class="boton-volver"
-          >Volver a la página principal</a
-        >
-      </nav>
-    </header>
+    <div id="floating-menu">
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="menu-icon"></div>
+      </div>
+      <div class="menu-items">
+        <a href="carrusel.html">Carrusel</a>
+        <a href="cartasAgradecimiento.html">Cartas de Agradecimiento</a>
+        <a href="index.html">Inicio</a>
+        <a href="indexDonation.html">Donaciones</a>
+      </div>
+    </div>
+    
 
     <div class="login-container">
       <h2>Iniciar Sesión</h2>
@@ -33,6 +37,27 @@
         <button type="submit">Iniciar Sesión</button>
         <p>¿No tienes una cuenta? <a href="{{ url_for('form_inc') }}">Regístrate</a></p>
       </form>
+  <script>
+    // Función para mostrar/ocultar el menú al hacer clic en la tuerca
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.querySelector('.menu-items');
+    this.classList.toggle('active');
+    menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    });
+
+// Función para ocultar el menú cuando se hace clic fuera de él
+    document.addEventListener('click', function (event) {
+    const menu = document.querySelector('.menu-items');
+    const toggle = document.getElementById('menu-toggle');
+  
+  if (menu.style.display === 'block' && !toggle.contains(event.target) && event.target !== toggle) {
+      menu.style.display = 'none';
+      toggle.classList.remove('active');
+  }
+});
+
+    </script>
+     
     
     <script>
       // Función para validar el formulario

@@ -42,7 +42,13 @@ def login():
 def form_inc():
     return render_template('formInc.html')
 
+@app.route('/formulario_opcion')
+def formulario_opcion():
+    return render_template('indexFormularioOp.html')
 
+@app.route('/formulario_curso')
+def formulario_curso():
+    return render_template('indexFormularioCurso.html')
 # Rutas para el registro y el inicio de sesión
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
@@ -103,7 +109,7 @@ def formulario_inscripcion():
 
         return redirect(url_for('gracias'))
 
-    return render_template('indexFormularioCurso.html')
+    return render_template('indexFormularioOp.html')
 
 @app.route('/gracias')
 def gracias():

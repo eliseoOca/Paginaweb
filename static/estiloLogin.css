@@ -122,3 +122,52 @@ a:hover {
     margin-top: 10px;
     /* Agrega margen superior para separarlo del formulario */
 }
+
+/* Estilo del menú flotante */
+#floating-menu {
+    position: fixed;
+    bottom: 700px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(240, 7, 7);
+    transition: transform 0.3s;
+}
+
+.menu-toggle.active {
+    transform: rotate(45deg);
+}
+
+.menu-items {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 60px;
+    top: 0;
+}
+
+.menu-items a {
+    color: rgb(231, 11, 11);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-items a:hover {
+    text-decoration: underline;
+
+}

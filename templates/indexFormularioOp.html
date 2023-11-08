@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegir Formulario</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='estiloIndexFormOp.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Elige un formulario</h1>
+      <div class="form-selectors">
+        <a href="{{ url_for('formulario_curso') }}" class="form-link"
+          >Formulario Inscripción a Cursos</a
+        >
+        <a href="{{ url_for('index_banco_alimento') }}" class="form-link"
+          >Formulario Banco de Alimentos</a
+        >
+      </div>
+      <div class="back-button-container">
+        <a href="javascript:history.back()" class="back-button">Volver Atrás</a>
+      </div>
+    </div>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>
