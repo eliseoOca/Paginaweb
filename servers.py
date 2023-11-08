@@ -38,6 +38,11 @@ def index_donation():
 def login():
     return render_template('login.html')
 
+@app.route('/formInc')
+def form_inc():
+    return render_template('formInc.html')
+
+
 # Rutas para el registro y el inicio de sesión
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
