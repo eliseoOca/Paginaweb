@@ -50,10 +50,12 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
 /* Estilos anteriores */
 
 p {
-    margin-top: 10px; /* Espacio entre el formulario y el enlace de registro */
+    margin-top: 10px;
+    /* Espacio entre el formulario y el enlace de registro */
 }
 
 a {
@@ -62,19 +64,61 @@ a {
 }
 
 a:hover {
-    text-decoration: underline; /* Subraya el enlace al pasar el mouse sobre él */
+    text-decoration: underline;
+    /* Subraya el enlace al pasar el mouse sobre él */
 }
 
 /* Estilo para el mensaje de error */
 /* Estilo para el mensaje de error */
 .error-message {
-    color: #ff0000; /* Color rojo para el texto del mensaje de error */
-    font-size: 16px; /* Tamaño de fuente más grande */
-    background-color: #ffe5e5; /* Fondo con un tono de rojo claro */
-    padding: 10px; /* Relleno alrededor del mensaje */
-    border: 2px solid #ff0000; /* Borde rojo */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center; /* Centra el texto horizontalmente */
-    margin-top: 10px; /* Espacio superior para separar el mensaje del formulario */
+    color: #ff0000;
+    /* Color rojo para el texto del mensaje de error */
+    font-size: 16px;
+    /* Tamaño de fuente más grande */
+    background-color: #ffe5e5;
+    /* Fondo con un tono de rojo claro */
+    padding: 10px;
+    /* Relleno alrededor del mensaje */
+    border: 2px solid #ff0000;
+    /* Borde rojo */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    margin-top: 10px;
+    /* Espacio superior para separar el mensaje del formulario */
 }
 
+/* CSS */
+.boton-volver {
+    position: absolute;
+    top: 10px;
+    /* Ajusta la distancia desde la parte superior de la página */
+    right: 100px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton-volver:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* Estilo para el contenedor del formulario y el botón de volver */
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.boton-volver {
+    align-self: flex-end;
+    /* Alinea el botón a la derecha */
+    margin-top: 10px;
+    /* Agrega margen superior para separarlo del formulario */
+}

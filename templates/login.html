@@ -11,7 +11,15 @@
     />
   </head>
   <body>
-    
+    <header class="header" id="inicio">
+      <nav>
+        <!-- ... tu menú de navegación ... -->
+        <a href="{{ url_for('index') }}" class="boton-volver"
+          >Volver a la página principal</a
+        >
+      </nav>
+    </header>
+
     <div class="login-container">
       <h2>Iniciar Sesión</h2>
       {% if error_message %}
@@ -25,7 +33,7 @@
         <button type="submit">Iniciar Sesión</button>
         <p>¿No tienes una cuenta? <a href="formInc.html">Regístrate</a></p>
       </form>
-    </div>
+    
     <script>
       // Función para validar el formulario
       function validarFormulario() {
@@ -43,6 +51,5 @@
         return true;
       }
     </script>
-    
   </body>
 </html>
