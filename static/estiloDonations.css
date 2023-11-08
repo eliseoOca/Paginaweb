@@ -161,8 +161,8 @@ button:hover {
     flex: 2;
     background-color: #ffffff;
     position: absolute;
-    top: 25%;
-    left: 50%;
+    top: 40%;
+    left: 70%;
     transform: translate(-50%, -50%);
     
     

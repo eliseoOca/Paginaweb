@@ -13,7 +13,7 @@
     
 </head>
 <body>
-    <header class="header" id="inicio">
+   <!-- <header class="header" id="inicio">
         
         <nav>
             <div class="navbar">
@@ -34,7 +34,25 @@
         </nav>
     
 
-    </header>
+    </header>-->
+    <header class="header" id="inicio">
+    <nav>
+        <div class="navbar">
+            <ul class="nav-list">
+                <li class="dropdown">
+                    <a class="menu" href="#servicios">MENU</a>
+                    <div class="dropdown-content1 menu-div">
+                        <a href="{{ url_for('carrusel') }}">Class</a>
+                        <a href="{{ url_for('index_donation') }}">Donations</a>
+                        <a href="">Gallery</a>
+                        <a href="{{ url_for('login') }}">Course/Food Bank Registration Form</a>
+                        <a href="{{ url_for('cartasAgradecimiento') }}">Letter of Gratitude</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
     <main>
         <section class="contenedor" id="servicio">
         <h2 class="subtitulo">Organization Summary</h2>
