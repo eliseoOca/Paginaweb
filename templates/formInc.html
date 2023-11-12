@@ -97,20 +97,34 @@
         margin-top: 10px;
         /* Agrega margen superior para separarlo del formulario */
       }
+      a {
+        display: block;
+        color: #007bff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <header class="header" id="inicio">
-      <nav>
-        <!-- ... tu menú de navegación ... -->
-        <a href="{{ url_for('index') }}" class="boton-volver"
-          >Volver a la página principal</a
-        >
-      </nav>
+      
     </header>
+
+
     <div class="container">
       <h2>Registro de Usuario</h2>
-      <form action="/" method="POST">
+      
+      <form action="{{ url_for('registro') }}" method="POST">
         <div class="form-group">
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />
@@ -126,18 +140,9 @@
         <div class="form-group text-center">
           <input type="submit" value="Registrarse" />
         </div>
+        <a href="{{ url_for('login') }}">Ir a la página principal</a>
       </form>
+      
     </div>
-
-    <!--<script>
-        function redirigirDespuesDeRegistro() {
-            // falta validad la redirección
-            // verificar si el registro fue exitoso
-
-            // Supongamos que el registro fue exitoso, entonces redirige al usuario a la página de inicio de sesión
-            window.location.href = "/login.html"; 
-            return false; // Evita que el formulario se envíe
-        }
-    </script>-->
   </body>
 </html>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 import psycopg2
 
 app = Flask(__name__)
@@ -49,6 +49,7 @@ def formulario_opcion():
 @app.route('/formulario_curso')
 def formulario_curso():
     return render_template('indexFormularioCurso.html')
+
 # Rutas para el registro y el inicio de sesión
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
@@ -61,10 +62,10 @@ def registro():
         cursor.execute("INSERT INTO usuarios (nombre, email, password) VALUES (%s, %s, %s)", (nombre, email, password))
         db.commit()
         cursor.close()
-
         return redirect(url_for('inicio_sesion'))
 
-    return redirect(url_for('inicio_sesion'))  # Redirige directamente al inicio de sesión
+    return render_template("login.html")  
+
 
 @app.route('/inicio_sesion', methods=["GET", "POST"])
 def inicio_sesion():
@@ -76,7 +77,7 @@ def inicio_sesion():
         cursor.execute("SELECT id, nombre, email, password FROM usuarios WHERE email = %s", (username,))
         user = cursor.fetchone()
         cursor.close()
-
+        
         if user and user[3] == password:
             session["user_id"] = user[0]
             return redirect(url_for('formulario_inscripcion'))
